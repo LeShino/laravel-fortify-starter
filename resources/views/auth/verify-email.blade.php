@@ -51,12 +51,12 @@
 
     <div class="wrapper">
         <section class="login-content">
-           <div class="row m-0 align-items-center bg-white vh-100">            
-              <div class="col-md-6 p-0">    
+           <div class="row m-0 align-items-center bg-white vh-100">
+              <div class="col-md-6 p-0">
                  <div class="card card-transparent auth-card shadow-none d-flex justify-content-center mb-0">
                     <div class="card-body">
                           <a href="../index.html" class="navbar-brand d-flex align-items-center mb-3">
-                             
+
                              <!--Logo start-->
                              <div class="logo-main">
                                  <div class="logo-normal">
@@ -76,7 +76,7 @@
                                      </svg>
                                  </div>
                              </div>
-                             <!--logo End-->                           
+                             <!--logo End-->
                              <h4 class="logo-title ms-3 mb-0" data-setting="app_name">Hope UI</h4>
                           </a>
                           <img src="../../assets/images/auth/mail.html" class="img-fluid" width="80" alt="">
@@ -92,7 +92,7 @@
                                 @endif
                             </p>
 
-                             <form method="POST" action="{{ route('password.email') }}">
+                             <form method="POST" action="{{ route('verification.send') }}">
                                 @csrf
                                 {{-- <input type="hidden" name="token" value="{{ /*$token ?? '' */ $request->route('token') }}"> --}}
                                 <div class="row">
@@ -100,11 +100,11 @@
 
                                         <div class="floating-label form-group">
                                             <label for="email" class="form-label">{{ __('Email Address') }}</label>
-                                            <input id="email" 
-                                                type="email" 
-                                                class="form-control @error('email') is-invalid @enderror" 
-                                                name="email" value="{{ old('email') }}" 
-                                                required autocomplete="email" 
+                                            <input id="email"
+                                                type="email"
+                                                class="form-control @error('email') is-invalid @enderror"
+                                                name="email" value="{{ old('email') }}"
+                                                required autocomplete="email"
                                                 autofocus>
 
                                             @error('email')
