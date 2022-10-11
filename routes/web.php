@@ -21,9 +21,9 @@ Route::get('/home', function () {
     return view('dashboard.home');
 })->middleware(['auth', 'verified']);
 
-//Route::get('/home', function () {
-//    return view('dashboard.home');
-//})/*->middleware(['auth', 'verified'])*/;
+Route::get('/tfa', function () {
+    return view('auth.tfa');
+})->middleware(['auth', 'verified']);
 
 // Route::get('/register', function () {
 //     return view('auth.register');
